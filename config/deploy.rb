@@ -17,7 +17,7 @@ set :use_set_permissions,       false
 
 set :symfony_env,               fetch(:symfony_target_env)
 set :app_path,                  "app"
-set :web_path,                  "web"
+set :web_path,                  "public"
 set :log_path,                  fetch(:app_path) + "/logs"
 set :cache_path,                fetch(:app_path) + "/cache"
 set :app_config_path,           fetch(:app_path) + "/config"
