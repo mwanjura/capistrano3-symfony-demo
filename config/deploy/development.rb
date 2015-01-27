@@ -8,7 +8,7 @@ role :db,  %w{}
 
 set :servers_to_restart, ['capistrano3-demo-deployed.local']
 
-set :webserver_service,                 "httpd"
+set :webserver_service,                 "apache2"
 set :webserver_user,                    "apache"
 set :webserver_group,                   "apache"
 set :rails_env,                         "development"
