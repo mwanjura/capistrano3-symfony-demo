@@ -28,7 +28,7 @@ SSHKit.config.command_map[:composer] = "/var/www/shared/composer.phar"
 
 set :user, "vagrant"
 set :ssh_options, {
-    keys: ["#{ENV['HOME']}/.vagrant.d/insecure_private_key"],
+    keys: ["~/.vagrant.d/insecure_private_key"],
     forward_agent: false,
     port: 22,
     auth_methods: %w(publickey),
