@@ -48,7 +48,7 @@ namespace :custom do
 
     task :set_symfony_env do
         on roles(:app) do
-            execute "cd #{fetch(:release_path)}; if [ 'web/#{fetch(:symfony_taget_env_frontcontroller)}' != 'web/app.php' ]; then cp -rf web/#{fetch(:symfony_taget_env_frontcontroller)} web/app.php; fi"
+            execute "cd #{fetch(:release_path)}; if [ 'public/#{fetch(:symfony_taget_env_frontcontroller)}' != 'public/app.php' ]; then cp -rf public/#{fetch(:symfony_taget_env_frontcontroller)} public/app.php; fi"
         end
     end
 
