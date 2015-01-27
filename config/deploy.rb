@@ -55,6 +55,7 @@ namespace :custom do
 end
 
 namespace :deploy do
+  before :started, 'composer:install_executable'
   before :updated, 'custom:set_symfony_env'
   before :finishing, 'symfony:assetic:dump'
   after :log_revision, 'custom:restart_webserver'
