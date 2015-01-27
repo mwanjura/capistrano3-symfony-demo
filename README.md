@@ -1,22 +1,28 @@
 Usage:
 =================
 
-1. $ `vagrant up`
+1. Install vagrant: https://www.vagrantup.com/
 
-2. $ `vagrant ssh capistrano3demo`
+2. $ `vagrant up`
 
-3. $ `cd /var/www/`
+3. $ `vagrant ssh capistrano3demo`
 
-4. $ `composer install`
+4. $ `cd /var/www/`
 
-5. $ `exit`
+5. $ `composer install`
 
-6. Open http://capistrano3-demo.local/. You should see the symfony acme application.
+6. $ `exit`
 
-7. Open http://capistrano3-demo-deployed.local/. You should see a "Not Found" message.
+7. Open http://capistrano3-demo.local/. You should see the symfony acme application.
 
-8. $ `gem install bundler`
+8. Open http://capistrano3-demo-deployed.local/. You should see a "Not Found" message.
 
-9. $ `bundle install`
+9. $ `gem install bundler`
 
-10. $ `bundle exec cap -T`
+10. $ `bundle install`
+
+11. $ `bundle exec cap -T`
+
+12. $ `bundle exec cap development deploy`
+
+13. $ `bundle exec cap production deploy`
