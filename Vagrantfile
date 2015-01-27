@@ -29,4 +29,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell",
       inline: "sudo chown vagrant:vagrant /var/www/"
 
+  config.vm.provision "shell",
+      inline: "sudo sed -i -e 's@/var/www/public@/var/www/current/public@g' /etc/apache2/sites-enabled/000-default.conf"
+
+  config.vm.provision "shell",
+      inline: "sudo sed -i -e 's@www-data@vagrant@g' /etc/apache2/envvars"
+
 end
