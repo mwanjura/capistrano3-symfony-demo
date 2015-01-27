@@ -39,10 +39,8 @@ namespace :custom do
 
     desc 'Restart webserver'
     task :restart_webserver do
-        fetch(:servers_to_restart).each do |server|
-            on server do
-                execute "sudo service #{fetch(:webserver_service)} restart"
-            end
+        on roles(:app) do
+            execute "sudo service #{fetch(:webserver_service)} restart"
         end
     end
 

@@ -2,15 +2,13 @@
 # All variables that are independent per env goes here
 ############################################################
 
-role :app, %w{capistrano3-demo-deployed.local}
+role :app, %w{capistrano3-demo-deploy-one.local capistrano3-demo-deploy-two.local}
 role :web, %w{}
 role :db,  %w{}
 
-set :servers_to_restart, ['capistrano3-demo-deployed.local']
-
 set :webserver_service,                 "apache2"
-set :webserver_user,                    "apache"
-set :webserver_group,                   "apache"
+set :webserver_user,                    "vagrant"
+set :webserver_group,                   "vagrant"
 set :rails_env,                         "production"
 set :deploy_to,                         "/var/www/"
 set :user,                              "vagrant"
