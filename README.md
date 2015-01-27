@@ -1,3 +1,10 @@
+Additional presentation:
+=================
+
+You can see a additional presentation here:
+https://github.com/mwanjura/capistrano3-symfony-demo-presentation
+http://mwanjura.github.io/capistrano3-symfony-demo-presentation
+
 Usage:
 =================
 
